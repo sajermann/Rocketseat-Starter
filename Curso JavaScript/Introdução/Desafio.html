@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Desafio 1
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        console.log(`O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com nº ${endereco.numero}.`)
+
+        //Desafio 2
+        function pares(x, y) {
+            for(var i = x; i <= y; i++){
+                if(i % 2 == 0){
+                    console.log(i)
+                }
+            }
+        }
+        pares(32, 321);
+
+        //Desafio 3
+        function temHabilidade(skills) {
+            if(skills.indexOf("Javascript") != -1){
+                console.log('Possui Javascript em suas skills')
+            }else{
+                console.log('Não possui Javascript em suas skills')
+            }
+        }
+
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        temHabilidade(skills);
+
+        //Desafio 4
+        function experiencia(anos) {
+            if(anos < 1 ){
+                console.log('Iniciante');
+            }
+            else if(anos < 3 ){
+                console.log('Intermediário');
+            }
+            else if(anos < 6 ){
+                console.log('Avançado');
+            }
+            else {
+                console.log('Jedi Master');
+            }
+        }
+        var anosEstudo = 3;
+        experiencia(anosEstudo);
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+
+        //Desafio 5
+        var usuarios = [
+            {
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        function desafio5(usuarios){
+            for(user of usuarios){
+                console.log(`O ${user.nome} possui as habilidades: ${user.habilidades.join(', ')}`)
+            }
+        }
+
+        desafio5(usuarios);
+
+    </script>
+</body>
+</html>
